@@ -6,19 +6,17 @@ class Titulaire {
     private string $prenom;
     private DateTime $bdDate;
     private string $ville;
-    private string $sesBankAcc;
     private array $banques;
 
 
 
 
-    public function __construct(string $nom, string $prenom, string $bdDate, string $ville, string $sesBankAcc) {
+    public function __construct(string $nom, string $prenom, string $bdDate, string $ville,) {
 
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->bdDate = new DateTime ($bdDate);
         $this->ville = $ville;
-        $this->sesBankAcc = $sesBankAcc;
         $this->banques = [];
 
 
@@ -110,25 +108,6 @@ class Titulaire {
         return $this;
     }
 
-    /**
-     * Get the value of sesBankAcc
-     */ 
-    public function getSesBankAcc()
-    {
-        return $this->sesBankAcc;
-    }
-
-    /**
-     * Set the value of sesBankAcc
-     *
-     * @return  self
-     */ 
-    public function setSesBankAcc($sesBankAcc)
-    {
-        $this->sesBankAcc = $sesBankAcc;
-
-        return $this;
-    }
     
     /**
      * Get the value of banques
@@ -177,7 +156,7 @@ class Titulaire {
 
     public function __toString() {
         
-        return $this->nom. " ".$this->prenom." (".$this->bdDate->format("d-m-Y").")"." ".$this->sesBankAcc;  
+        return $this->nom. " ".$this->prenom." (".$this->bdDate->format("d-m-Y").")";  
      }
 
 } 

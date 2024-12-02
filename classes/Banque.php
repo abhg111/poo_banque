@@ -130,6 +130,28 @@ public function __construct(string $libelle, string $soldeInt, string $devise, s
         return $this;
     }
 
+   
+     
+    public function crediter($amount , $compte) {
+        $compte->soldeInt += $amount;
+        return "Crediter $amount de ce compte $this->libelle. New balance: $this->soldeInt € </br>";
+    }
+
+
+    public function debiter($amount) {
+            $this->soldeInt -= $amount;
+            return "Deposit $amount into account $this->libelle. New balance: $this->soldeInt € </br>";
+        }
+
+
+
+    public function virement($amount, $compte){
+            $this->debiter($amount);
+            $this->crediter($amount ,$compte);
+
+            return "Transfer $amount into account $this->libelle. New balance: $this->soldeInt € </br>";
+        }
+
 
 
 
