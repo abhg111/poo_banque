@@ -19,8 +19,8 @@ This function shows each book's name and info.
  
 ```
   ## **Display result**
- 
- ![alt text](image.png)
+ ![image](https://github.com/user-attachments/assets/2c5ddd4b-097d-4afa-a463-a256fb89359f)
+
 
  
 ## **if you have question about the project you can contact me on my [linkedIn]()**
